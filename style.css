@@ -1,0 +1,779 @@
+ body{        
+        padding-top: 60px;
+        padding-bottom: 40px;
+        background-color: #030424;
+        height: 100%;
+        font-family: "Times New Roman", Times, serif;
+        /*overflow: hidden;*/
+    }
+
+
+    .container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;
+        padding: 10px 0;
+        color: #fff;
+        background-color: #030424;
+        z-index: 1;
+    }
+    .fixed-header{
+        top: 0px;
+        display: flex;
+        background-color: #030424;
+    }
+    .fixed-footer{
+        bottom: 0px;
+    }    
+
+    .audio{
+        width: 100%;
+        border-radius: 0px;
+        background-color: black;
+        height: 30px;
+    }
+
+
+
+/*Header CSS Starts*/
+#logo img{
+    height: 75px;
+    width: 75px;
+    padding-right: 60px;
+    border-radius: 50%;
+    margin-left: 50px;
+
+}
+
+#form{
+    font-family: calibri;
+    margin-left: 800px;
+    font-size: 14px; 
+}
+
+#form input{
+     border-radius: 5px;
+     height: 30px;
+     width: 230px;
+     border-width: 0px;
+     padding: 5px;
+}
+
+.human{
+    width: 35px;
+    height: 35px;
+    display: contain;
+    border-radius: 50%;
+    margin-left: 30px;
+}
+
+
+ #input-icon {
+            width: 100%;
+            margin-top: 40px;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            z-index: 2;
+        }
+
+.text-box{
+    background-color: #363b5c;
+    margin-left: -40px;
+    z-index: 1;
+
+        }
+/*Header CSS Ends*/
+
+
+/*Container_flex starts */
+    #container_flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+
+/*Carousel Starts*/
+
+    .carousel, ul{
+    	height: 300px;
+    }
+
+    .carousel{
+    	position: relative;
+    	width: 600px;
+    	margin: 100px;
+    	overflow: hidden;
+    	margin-top: 55px;
+    	box-shadow: 10px 10px 15px rgba(0,0,0,0.50);
+    }
+
+    .carousel li{
+    	display: inline-block;
+    	height: 300px;
+    	float: left;
+    	position: relative;
+    	width: 600px;
+    }
+
+    .carousel ul{
+    	position: absolute;
+    	left: 0;
+    	top: -15px;
+    	width: 9000px;
+    	list-style: none;
+    	margin-left: -40px;
+    	transition: left .4s linear;
+    }
+
+    .carousel-container{
+    	margin: 0 auto;
+    	padding: 0px;
+    	width: 600px;
+    }
+
+    .carousle-container img{
+    	width: 100%;
+    	padding: 0 10px;
+    }
+
+    .carousel ul{
+    	animation: slide-animation 15s infinite;
+
+
+    }
+
+    .carousel ul: hover{
+        animation-play-state: paused; 
+    }
+
+    @keyframes slide-animation{
+    	20%{left: 0}
+    	25%{left: -600px}
+    	45%{left: -600px}
+    	50%{left: -1200px}
+    	70%{left: -1200px}
+    	75%{left: -1800px}
+    	98%{left: -1800px}
+    	100%{left: 0}
+    }
+
+/*Carousel Ends*/
+
+.common{
+    /*margin-left: 800px;*/
+    color: white;
+    margin-left: 60px;
+    margin-top: 70px;
+    position: relative;
+    width: 60%;
+}
+
+/*Recently played starts*/
+
+.recently{
+    display: flex;
+    flex-direction: row;
+
+}
+.recently p{
+    margin-left: 20px;
+    text-align: center;
+}
+.artist_photo_recently{
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.artist_photo_recently:hover{
+    opacity: 0.8;
+}
+
+
+
+/*Recently played ends*/
+
+.hidden{
+    height: 50px;
+}
+
+/*Artist of the day starts*/
+.artist_bg{
+     background-color: #070834;
+     border-radius: 20px;
+     width: 775px;
+     height:350px;
+}
+
+
+.artist_bg:hover{
+     box-shadow: 10px 10px 15px rgba(0,0,0,0.50);
+}
+
+.artist_bg h2{
+    margin-left: 30px;
+    padding-top: 20px;
+}
+.artist_photo{
+    border-radius: 50%;
+    width: 225px;
+    height: 225px;
+    margin-top: 30px;
+}
+
+.artist_pt{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+   
+}
+
+.artist_pt h2{
+    /*margin-left: 20px;*/
+    margin-top: 10px;
+
+}
+
+.artist_intro{
+    height: 280px;
+    width: 450px;
+    margin-left: 50px;
+    line-height: 30px;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.25rem;
+    color: #edede5;
+}
+
+.artist_intro a{
+    text-decoration: none;
+    color: white;
+}
+
+.artist_intro a:hover{
+    color: #edede5;
+    text-decoration: underline;
+}
+
+
+/*Artist of the day ends*/
+
+
+/*Latest Release starts*/
+
+.lr_container{
+    display: flex;
+    width: 500px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.lr_setup{
+    display: flex;
+    flex-direction: row;
+    background-color:  #070834;
+    width: 650px;
+    margin-left: 30px;
+    border-radius: 10px;
+    /*padding-left: 50px;*/
+}
+
+.lr_setup:hover{
+    box-shadow: 2px 2px 7px rgba(0,0,0,0.50);
+}
+
+
+.lr_photo{
+    width: 100px;
+    height: 100px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+
+.lr_text{
+    margin-left: 20px;
+}
+
+.lr_details{
+    margin-left: 150px;
+}
+/*Latesyt Release ends*/
+
+/*Queue starts*/
+
+.song_container{
+    margin-top: 70px;
+}
+
+    #queue_base{
+    background-color: #070834;
+    color: white;
+    height: 1040px;
+    width: 400px;
+    margin-top: 60px;
+    margin-right: 120px;
+    overflow: hidden;
+}
+
+
+#queue_base h1{
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.queue_song{
+    width: 300px;
+    height: 200px;
+    margin-left: 20px;
+    margin-top: 45px;
+    border: 1px;
+}
+
+.q_photo{
+    width: 75px;
+    height: 75px;
+    margin-left: 10px;
+}
+
+.q_setup{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.q_number{
+    margin-left: 10px;
+}
+
+.q_text{
+    margin-top: -15px;
+    margin-left: 25px;
+    width: 200px;
+    height: 70px;
+    /*background-color: orange;*/
+
+}
+
+.q_text p{
+    margin-top: -10px;
+}
+
+.q_details{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    /*background-color: white;*/
+}
+
+.q_intro{
+    display: flex;
+    flex-direction: row;
+}
+
+.q_intro a{
+    margin-left: 90px;
+    margin-top: 35px; 
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.q_intro a:hover{
+    text-decoration: underline;
+    color: #edede5;
+}
+/*Queue Ends*/
+/*Container_flex ends*/
+
+/*Footer Starts*/
+.player{
+    background-color: #363b5c;
+    position: relative;
+    height: 60px;
+    max-width: 100%;
+    border-radius: 10px 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.intro{
+    display: flex;
+    flex-direction: row;
+}
+.image_footer{
+    width: 45px;
+    height: 45px;
+    margin-top: 8px;
+    margin-left: 60px;
+    border-radius: 50%;
+}
+
+.footer_heading{
+    color: white;
+    margin-top: -10px;
+    margin-left: 15px;
+
+}
+
+
+.song_name{
+    color: white;
+    margin-top: -14px;
+    margin-left: -1px;
+}
+
+.f_heading{
+    color: white;
+    padding-top: 2px;
+    margin-left: 5px;
+    font-size: 1rem;
+    margin-left: -20px;
+
+}
+
+
+/*Slider Starts*/
+.song{
+    margin-left: 500px;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.songs_control{
+    margin-left: -75px;
+    display: inline-flex;
+}
+
+.songs_icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 7px;
+    border-radius: 5px;
+}
+
+.songs_icon:hover{
+    box-shadow: 2px 2px 7px rgba(0,0,0,0.50);
+}
+.slider {
+  -webkit-appearance: none;
+  width: 900px;
+  height: 10px;
+  margin-top: 2px;
+  background: #030424;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 10px;
+  margin-left: -425px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background:#f3f3f3;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background:#f3f3f3;
+  cursor: pointer;
+}
+
+/*Slider ends*/
+
+/*Icon start*/
+
+.icons_control{
+    display: inline-flex;
+    margin-left: 50px;
+}
+.footer_icon{
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.footer_icon:hover{
+    box-shadow: 2px 2px 7px rgba(0,0,0,0.50);
+}
+
+#slider_footer {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 10px;
+  margin-top: 19px;
+  background: #030424;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 10px;
+  margin-left: 12px;
+}
+
+/*Icon ends*/
+
+/*Footer ends*/
+
+/*Singer Page Starts*/
+
+.singer_photo{
+    width: 350px;
+    height: 350px;
+    margin-left: -30px;
+}
+
+
+.singer_pt{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+   
+}
+
+
+.singer_bg{
+     background-color: #070834;
+     /*border-radius: 20px;*/
+     width: 875px;
+     height:350px;
+}
+
+
+.singer_bg:hover{
+     box-shadow: 10px 10px 15px rgba(0,0,0,0.50);
+}
+
+
+.singer_intro{
+    height: 280px;
+    width: 450px;
+    margin-left: 50px;
+    line-height: 30px;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.25rem;
+    color: #edede5;
+}
+
+.singer_intro h4{
+    margin-top: -25px;
+
+}
+
+.singer_intro p{
+    font-size: 20px;
+
+}
+
+.button{
+    height: 40px;
+    width: 150px;
+    background-color: #1F3468;
+    /*background-color: #625a96; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 2px;
+    border-radius: 10px;
+}
+
+
+.button:hover{
+    background-color: #122964;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.50);
+}
+
+.button_text{
+    font-size: 12px;
+    margin-top: 0px;
+}
+
+    #queue_singer{
+    background-color: #070834;
+    color: white;
+    height: 910px;
+    width: 400px;
+    margin-top: 60px;
+    margin-right: 120px;
+    overflow: hidden;
+}
+
+
+#queue_singer h1{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.q_intro_heading{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.q_intro_link{
+    width: 80px;
+    height: 20px;
+    padding-top: -5px;
+    /*background-color: white;*/
+    padding-left: 35px;
+    margin-top: 25px;
+}
+.singer_songs{
+    margin-left: 60px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.singer_base{
+    width: 870px;
+    height: 100px;
+    background-color: #070834;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-top: 10px;
+}
+
+.singer_base:hover{
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.50);
+}
+
+.singer_main_image{
+    width: 90px;
+    height: 90px;
+    margin-top: 15px;
+}
+.singer_main_number{
+    margin-left: 10px;
+    margin-top: 25px;
+}
+
+.singer_main_intro{
+    margin-left: 15px;
+    margin-top: 5px; 
+    width: 80px;
+    height:100px;
+}
+
+.singer_main_intro p{
+    /*margin-left: 10px;*/
+    margin-top: -10px;
+    font-size: 15px; 
+}
+
+.singer_main_time{
+    /*background-color: white;*/
+    width: 550px;
+    height: 100px;
+    margin-left: 20px;
+    text-align: center;
+    /*color: black;*/
+}
+
+.singer_main_time p{
+    margin-top: 30px;
+}
+
+.singer_main_icon{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+.dropbtn {
+  color: white;
+  background-color: #070834;
+  padding: 16px;
+  font-size: 15px;
+  width: 70px;
+  border: none;
+}
+
+.dropbtn:hover {
+  color: cyan;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #070834;
+  margin-top: 10px;
+  /*width: 150px;*/
+
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px ;
+  margin-top: -10px;
+  text-decoration: none;
+  display: block;
+}
+
+/*.dropdown-content a:hover{
+    background-color: #070834;
+}*/
+
+.dropdown-content a:hover{
+    text-decoration: underline;
+    color: #edede5;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown:hover .dropbtn{
+    background-color:#070834;
+}
